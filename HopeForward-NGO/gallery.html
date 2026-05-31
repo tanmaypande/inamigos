@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="See HopeForward's work in action — photos from our programs, volunteers, and communities across the world."/>
+  <title>Gallery — HopeForward NGO</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .gallery-filter {
+      display: flex;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--mid-gray);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--charcoal);
+      border-color: var(--charcoal);
+      color: var(--white);
+    }
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-color: var(--gold);
+    }
+    .gallery-masonry {
+      columns: 4;
+      column-gap: 1rem;
+    }
+    .gallery-masonry .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      display: block;
+      border-radius: var(--radius-sm);
+    }
+    .gallery-masonry .gallery-item img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      min-height: unset;
+    }
+    @media (max-width: 1024px) { .gallery-masonry { columns: 3; } }
+    @media (max-width: 768px)  { .gallery-masonry { columns: 2; } }
+    @media (max-width: 480px)  { .gallery-masonry { columns: 1; } }
+
+    .gallery-item[data-hidden="true"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+    <span class="logo-text">Hope<span>Forward</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Our Work</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <p class="section-eyebrow">Our Impact in Pictures</p>
+    <h1>The <em>Gallery</em></h1>
+    <p>Every image tells a story. Browse through our field photographs — real moments of change, captured from our programs across 48 countries.</p>
+  </div>
+</div>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Gallery</span></nav>
+
+<section class="bg-white">
+  <!-- Filter -->
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Browse By Category</p>
+    <h2 class="section-title">Stories Through <em>Images</em></h2>
+  </div>
+  <div class="gallery-filter reveal">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    <button class="filter-btn" data-filter="education">Education</button>
+    <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+    <button class="filter-btn" data-filter="water">Water & Sanitation</button>
+    <button class="filter-btn" data-filter="women">Women's Empowerment</button>
+    <button class="filter-btn" data-filter="environment">Environment</button>
+    <button class="filter-btn" data-filter="volunteers">Volunteers</button>
+  </div>
+
+  <!-- Masonry Gallery -->
+  <div class="gallery-masonry">
+    <div class="gallery-item" data-category="education">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80" alt="Children learning in school"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="healthcare">
+      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&q=80" alt="Mobile clinic visit"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="volunteers">
+      <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&q=80" alt="International volunteers"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="water">
+      <img src="https://images.unsplash.com/photo-1527100673774-cce25eafaf7f?w=500&q=80" alt="Clean water well"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="education">
+      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80" alt="School construction"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="women">
+      <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=80" alt="Women's training program"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="environment">
+      <img src="https://images.unsplash.com/photo-1542601906897-ecd3bf38bd4e?w=500&q=80" alt="Tree planting campaign"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="healthcare">
+      <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500&q=80" alt="Vaccination drive"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="education">
+      <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=500&q=80" alt="Outdoor classroom"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="volunteers">
+      <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80" alt="Field volunteer team"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="water">
+      <img src="https://images.unsplash.com/photo-1617394569736-7e48adea9100?w=500&q=80" alt="Water purification system"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="women">
+      <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&q=80" alt="Women entrepreneur"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="environment">
+      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=500&q=80" alt="Sustainable farming"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="healthcare">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Community health workers"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="volunteers">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80" alt="Volunteer planning"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+    <div class="gallery-item" data-category="education">
+      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Student graduating"/>
+      <div class="gallery-overlay"><span>🔍</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="impact-section">
+  <div class="impact-grid">
+    <div class="impact-item reveal delay-1">
+      <div class="impact-icon">📷</div>
+      <div class="impact-number"><span data-count="4800" data-duration="2000">0</span></div>
+      <div class="impact-label">Photos in Archive</div>
+    </div>
+    <div class="impact-item reveal delay-2">
+      <div class="impact-icon">🎬</div>
+      <div class="impact-number"><span data-count="120" data-duration="1800">0</span></div>
+      <div class="impact-label">Documentary Films</div>
+    </div>
+    <div class="impact-item reveal delay-3">
+      <div class="impact-icon">🌍</div>
+      <div class="impact-number"><span data-count="48" data-duration="1600">0</span></div>
+      <div class="impact-label">Countries Documented</div>
+    </div>
+    <div class="impact-item reveal delay-4">
+      <div class="impact-icon">🏆</div>
+      <div class="impact-number"><span data-count="24" data-duration="1400">0</span></div>
+      <div class="impact-label">Media Awards Won</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner reveal">
+  <p class="section-eyebrow">Be in the Next Photo</p>
+  <h2 class="section-title">Create <em style="color:var(--gold-light)">Memories</em> With Us</h2>
+  <p>Join our field teams and be part of the stories we tell. Volunteers from all backgrounds are welcome on every mission.</p>
+  <div class="btn-group">
+    <a href="contact.html" class="btn-white">Volunteer Today</a>
+    <a href="donate.html" class="btn-outline-white">♥ Donate</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+        <span class="logo-text">Hope<span>Forward</span></span>
+      </a>
+      <p class="footer-desc">A globally recognized NGO dedicated to sustainable development, education, and humanitarian action.</p>
+      <div class="social-links"><a href="#" class="social-link">f</a><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">▣</a><a href="#" class="social-link">in</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Work</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="services.html">Education</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Clean Water</a></li><li><a href="services.html">Women's Empowerment</a></li></ul></div>
+    <div class="footer-col"><h4>Newsletter</h4><p style="font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1rem;line-height:1.6;">Monthly impact stories.</p><form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Your email"/><button type="submit">→</button></form></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 HopeForward NGO. Registered Charity #HC-2008-4471.</p>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Annual Report</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/counter.js"></script>
+<script>
+  // Gallery filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-masonry .gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.removeAttribute('data-hidden');
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>

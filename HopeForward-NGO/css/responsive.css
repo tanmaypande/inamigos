@@ -1,0 +1,96 @@
+/* ============================================================
+   RESPONSIVE — HopeForward NGO
+   ============================================================ */
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  section { padding: 4.5rem 5%; }
+
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-left { padding: 7rem 5% 3rem; }
+  .hero-right { height: 60vw; position: relative; }
+  .hero-right .hero-image-grid { position: relative; height: 100%; }
+
+  .mission-strip { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-split { grid-template-columns: 1fr; gap: 3rem; }
+  .about-image-badge { right: 0; }
+
+  .contact-section { grid-template-columns: 1fr; gap: 3rem; }
+  .donate-grid { grid-template-columns: 1fr; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-item.large { grid-column: span 1; grid-row: span 1; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  :root { font-size: 15px; }
+
+  section { padding: 3.5rem 5%; }
+
+  /* Navbar */
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* Hero */
+  .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+  .hero-right { height: 55vw; min-height: 240px; }
+  .hero-title { font-size: 2.2rem; }
+
+  /* Mission */
+  .mission-right { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* Impact */
+  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .impact-number { font-size: 2.2rem; }
+
+  /* Team */
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Testimonials */
+  .testimonials-slider { grid-template-columns: 1fr; }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .gallery-item.tall, .gallery-item.large { grid-column: span 1; grid-row: span 1; }
+
+  /* Forms */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+
+  /* Donate */
+  .donate-amounts { grid-template-columns: repeat(2, 1fr); }
+
+  /* Page hero */
+  .page-hero { padding: 7rem 5% 4rem; }
+
+  /* CTA */
+  .cta-banner .btn-group { flex-direction: column; align-items: center; }
+}
+
+/* ── Small Mobile ── */
+@media (max-width: 480px) {
+  .hero-title { font-size: 1.9rem; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-secondary, .btn-gold { width: 100%; justify-content: center; }
+
+  .impact-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+
+  .donate-amounts { grid-template-columns: 1fr 1fr 1fr; }
+
+  .cause-card-image { height: 170px; }
+
+  .nav-logo .logo-text { font-size: 1.1rem; }
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact HopeForward — reach us for partnerships, volunteering, media inquiries, or general questions."/>
+  <title>Contact Us — HopeForward NGO</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .volunteer-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      border: 1.5px solid var(--light-gray);
+      text-align: center;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .volunteer-card:hover, .volunteer-card.selected {
+      border-color: var(--gold);
+      background: linear-gradient(135deg, rgba(201,168,76,0.05), rgba(201,168,76,0.02));
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .volunteer-card .icon { font-size: 2rem; margin-bottom: 0.7rem; }
+    .volunteer-card h4 { font-family: var(--font-serif); font-size: 1.05rem; color: var(--dark); margin-bottom: 0.4rem; }
+    .volunteer-card p { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.5; }
+    .map-placeholder {
+      height: 320px;
+      background: linear-gradient(135deg, var(--charcoal), #2a2a2a);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      margin-top: 2.5rem;
+    }
+    .map-placeholder .map-icon { font-size: 2.5rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+    <span class="logo-text">Hope<span>Forward</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Our Work</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h1>We'd Love to <em>Hear</em> From You</h1>
+    <p>Whether you want to volunteer, partner with us, make a donation inquiry, or simply learn more — our team is ready to respond.</p>
+  </div>
+</div>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Contact Us</span></nav>
+
+<!-- CONTACT MAIN -->
+<section class="bg-white">
+  <div class="contact-section">
+    <div class="contact-info reveal-left">
+      <p class="section-eyebrow">Reach Out</p>
+      <h2>Let's Start a <em class="text-gold">Conversation</em></h2>
+      <p>Our team responds to all inquiries within 24–48 business hours. For urgent matters, please call our helpline directly.</p>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Global Headquarters</strong>
+            <span>14 Hope Avenue, Nairobi 00100, Kenya</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Helpline</strong>
+            <span>+254 700 000 001 (Mon–Fri, 8AM–6PM EAT)</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>General Inquiries</strong>
+            <span>hello@hopeforward.org</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🤝</div>
+          <div class="contact-item-text">
+            <strong>Partnerships & Grants</strong>
+            <span>partners@hopeforward.org</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📰</div>
+          <div class="contact-item-text">
+            <strong>Media & Press</strong>
+            <span>press@hopeforward.org</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-placeholder">
+        <div class="map-icon">🗺️</div>
+        <span>14 Hope Avenue, Nairobi, Kenya</span>
+        <a href="https://maps.google.com" target="_blank" style="color:var(--gold-light);font-size:0.85rem;">Open in Google Maps →</a>
+      </div>
+    </div>
+
+    <div class="contact-form-card reveal-right">
+      <div style="margin-bottom:1.8rem;">
+        <p class="section-eyebrow">Send a Message</p>
+        <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--dark);">Contact Form</h3>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Aarav" required/>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name *</label>
+            <input type="text" id="lname" name="lname" placeholder="Sharma" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number (Optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210"/>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a topic…</option>
+            <option>General Inquiry</option>
+            <option>Volunteer Application</option>
+            <option>Corporate Partnership</option>
+            <option>Grant / Funding</option>
+            <option>Media & Press</option>
+            <option>Donation Question</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" placeholder="Tell us how you'd like to get involved, or ask us anything…" required></textarea>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1.5rem;">
+          <input type="checkbox" id="consent" style="width:16px;height:16px;accent-color:var(--gold);"/>
+          <label for="consent" style="font-size:0.82rem;color:var(--mid-gray);cursor:pointer;">I agree to HopeForward's <a href="#" style="color:var(--gold-dark);">Privacy Policy</a> and consent to being contacted.</label>
+        </div>
+
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:1rem;">Send Message →</button>
+        <div class="form-success">✓ Your message has been received! We'll be in touch within 24–48 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER -->
+<section>
+  <div class="section-header centered reveal">
+    <p class="section-eyebrow">Join Us</p>
+    <h2 class="section-title">Ways to <em>Volunteer</em></h2>
+    <p class="section-desc">Whether you have a day, a week, or a year — there's a meaningful way for you to contribute your time and talents.</p>
+  </div>
+
+  <div class="volunteer-grid">
+    <div class="volunteer-card reveal delay-1" onclick="this.classList.toggle('selected')">
+      <div class="icon">🏕️</div>
+      <h4>Field Volunteer</h4>
+      <p>Join teams on the ground in program countries. Assignments range from 2 weeks to 12 months. All backgrounds welcome.</p>
+    </div>
+    <div class="volunteer-card reveal delay-2" onclick="this.classList.toggle('selected')">
+      <div class="icon">💻</div>
+      <h4>Remote / Digital</h4>
+      <p>Contribute your skills in design, data, writing, teaching, or tech — from anywhere in the world, on your own schedule.</p>
+    </div>
+    <div class="volunteer-card reveal delay-3" onclick="this.classList.toggle('selected')">
+      <div class="icon">🎓</div>
+      <h4>Skills-Based</h4>
+      <p>Medical professionals, engineers, teachers, lawyers, and specialists — your expertise directly serves communities.</p>
+    </div>
+    <div class="volunteer-card reveal delay-4" onclick="this.classList.toggle('selected')">
+      <div class="icon">📣</div>
+      <h4>Advocacy & Fundraising</h4>
+      <p>Become a HopeForward ambassador in your community — raise awareness, organize events, and inspire others to give.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:3rem;">
+    <a href="#contact-form" class="btn-primary" style="display:inline-flex;">Apply as Volunteer →</a>
+  </div>
+</section>
+
+<!-- VOLUNTEER FORM -->
+<section class="bg-white" id="volunteer-section">
+  <div class="contact-form-card reveal" style="max-width:680px;margin:0 auto;">
+    <div style="margin-bottom:1.8rem;text-align:center;">
+      <p class="section-eyebrow" style="justify-content:center;">Quick Apply</p>
+      <h3 style="font-family:var(--font-serif);font-size:1.5rem;color:var(--dark);">Volunteer Application</h3>
+    </div>
+
+    <form id="volunteer-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="v-name">Full Name *</label>
+          <input type="text" id="v-name" name="v-name" placeholder="Your full name" required/>
+        </div>
+        <div class="form-group">
+          <label for="v-email">Email *</label>
+          <input type="email" id="v-email" name="v-email" placeholder="you@example.com" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="v-type">Volunteer Type *</label>
+          <select id="v-type" name="v-type" required>
+            <option value="">Select type…</option>
+            <option>Field Volunteer</option>
+            <option>Remote / Digital</option>
+            <option>Skills-Based</option>
+            <option>Advocacy & Fundraising</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="v-avail">Availability *</label>
+          <select id="v-avail" name="v-avail" required>
+            <option value="">Select…</option>
+            <option>1–2 Weeks</option>
+            <option>1–3 Months</option>
+            <option>3–6 Months</option>
+            <option>6–12 Months</option>
+            <option>Ongoing / Remote</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="v-skills">Relevant Skills or Experience *</label>
+        <textarea id="v-skills" name="v-skills" placeholder="Tell us about your background, skills, and why you want to volunteer with HopeForward…" required></textarea>
+      </div>
+      <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:1rem;">Submit Application →</button>
+      <div class="form-success">✓ Application submitted! We'll review and contact you within 3–5 business days.</div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-header centered reveal">
+    <p class="section-eyebrow">FAQs</p>
+    <h2 class="section-title">Common <em>Questions</em></h2>
+  </div>
+  <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:1rem;">
+    <details style="background:var(--white);border-radius:var(--radius-sm);padding:1.5rem;border:1px solid var(--light-gray);cursor:pointer;" class="reveal delay-1">
+      <summary style="font-weight:600;color:var(--dark);font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        How much of my donation goes directly to programs?
+        <span style="color:var(--gold);font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--mid-gray);font-size:0.9rem;line-height:1.75;margin-top:1rem;">92 cents of every dollar donated goes directly to field programs. Our operational costs are independently audited and published annually in our Impact Report.</p>
+    </details>
+    <details style="background:var(--white);border-radius:var(--radius-sm);padding:1.5rem;border:1px solid var(--light-gray);cursor:pointer;" class="reveal delay-2">
+      <summary style="font-weight:600;color:var(--dark);font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        Do I need special qualifications to volunteer?
+        <span style="color:var(--gold);font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--mid-gray);font-size:0.9rem;line-height:1.75;margin-top:1rem;">No. We welcome volunteers from all backgrounds. The most important qualities are compassion, adaptability, and respect for local cultures. Specific skills are a bonus, not a requirement.</p>
+    </details>
+    <details style="background:var(--white);border-radius:var(--radius-sm);padding:1.5rem;border:1px solid var(--light-gray);cursor:pointer;" class="reveal delay-3">
+      <summary style="font-weight:600;color:var(--dark);font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        Can corporations or institutions partner with HopeForward?
+        <span style="color:var(--gold);font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--mid-gray);font-size:0.9rem;line-height:1.75;margin-top:1rem;">Absolutely. We welcome CSR partnerships, grant funding, in-kind support, and employee volunteer programs. Email partners@hopeforward.org to discuss tailored partnership structures.</p>
+    </details>
+    <details style="background:var(--white);border-radius:var(--radius-sm);padding:1.5rem;border:1px solid var(--light-gray);cursor:pointer;" class="reveal delay-4">
+      <summary style="font-weight:600;color:var(--dark);font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+        Are donations tax-deductible?
+        <span style="color:var(--gold);font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--mid-gray);font-size:0.9rem;line-height:1.75;margin-top:1rem;">Yes, in most countries where we operate. We are registered as a tax-exempt charitable organization in 18 jurisdictions. A receipt is automatically issued for all online donations.</p>
+    </details>
+  </div>
+</section>
+
+<section class="cta-banner reveal">
+  <p class="section-eyebrow">One More Step</p>
+  <h2 class="section-title">Ready to Make a <em style="color:var(--gold-light)">Difference?</em></h2>
+  <p>Every act of generosity, however big or small, creates a ripple of change that spreads further than you can imagine.</p>
+  <div class="btn-group">
+    <a href="donate.html" class="btn-white">♥ Donate Today</a>
+    <a href="services.html" class="btn-outline-white">Explore Programs</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+        <span class="logo-text">Hope<span>Forward</span></span>
+      </a>
+      <p class="footer-desc">A globally recognized NGO dedicated to sustainable development, education, and humanitarian action.</p>
+      <div class="social-links"><a href="#" class="social-link">f</a><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">▣</a><a href="#" class="social-link">in</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Work</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="services.html">Education</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Clean Water</a></li><li><a href="services.html">Women's Empowerment</a></li></ul></div>
+    <div class="footer-col"><h4>Newsletter</h4><p style="font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1rem;line-height:1.6;">Monthly impact stories.</p><form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Your email"/><button type="submit">→</button></form></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 HopeForward NGO. Registered Charity #HC-2008-4471.</p>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Annual Report</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Donate to HopeForward — your contribution directly funds education, healthcare, and community programs worldwide."/>
+  <title>Donate — HopeForward NGO</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .donate-wrapper { padding: 4rem 8%; }
+    .trust-badges {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--mid-gray);
+      background: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--light-gray);
+    }
+    .trust-badge .icon { font-size: 1rem; }
+    .donation-type-tabs {
+      display: flex;
+      gap: 0;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 0.8rem;
+      border: none;
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--mid-gray);
+      cursor: pointer;
+      transition: var(--transition);
+      border-right: 1.5px solid var(--light-gray);
+    }
+    .tab-btn:last-child { border-right: none; }
+    .tab-btn.active {
+      background: var(--charcoal);
+      color: var(--white);
+    }
+    .program-select-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 600px) { .program-select-grid { grid-template-columns: 1fr 1fr; } }
+    .program-select-btn {
+      padding: 0.7rem 0.5rem;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .program-select-btn.active, .program-select-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      background: rgba(42,107,107,0.05);
+    }
+    .secure-note {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .impact-meter {
+      background: var(--ivory);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--light-gray);
+    }
+    .impact-meter h4 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+    }
+    .impact-meter-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .impact-meter-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .impact-meter-item .amt { font-weight: 700; color: var(--gold-dark); min-width: 60px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+    <span class="logo-text">Hope<span>Forward</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Our Work</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-cta active">Donate Now</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- DONATE HERO -->
+<div class="donate-hero page-hero">
+  <div class="page-hero-content" style="margin:0 auto;text-align:center;max-width:700px;">
+    <p class="section-eyebrow" style="justify-content:center;color:var(--gold-light);">Make a Difference Today</p>
+    <h1 style="color:var(--white);">Your Gift <em>Changes</em> Everything</h1>
+    <p style="color:rgba(255,255,255,0.65);margin:0 auto;">92% of every dollar goes directly to our field programs. Transparent. Audited. Accountable.</p>
+    <div class="trust-badges">
+      <div class="trust-badge"><span class="icon">🔒</span> SSL Secure</div>
+      <div class="trust-badge"><span class="icon">✅</span> 92% to Programs</div>
+      <div class="trust-badge"><span class="icon">📋</span> Tax Deductible</div>
+      <div class="trust-badge"><span class="icon">⭐</span> 4-Star Charity</div>
+    </div>
+  </div>
+</div>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Donate</span></nav>
+
+<!-- DONATE MAIN -->
+<div class="donate-wrapper">
+  <div class="donate-grid">
+
+    <!-- FORM -->
+    <div class="contact-form-card reveal-left">
+      <div style="margin-bottom:1.5rem;">
+        <p class="section-eyebrow">Step 1 of 2</p>
+        <h2 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--dark);">Choose Your Donation</h2>
+      </div>
+
+      <!-- Frequency tabs -->
+      <div class="donation-type-tabs">
+        <button class="tab-btn active">One-Time</button>
+        <button class="tab-btn">Monthly</button>
+        <button class="tab-btn">Annual</button>
+      </div>
+
+      <!-- Preset amounts -->
+      <p style="font-size:0.8rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--charcoal);margin-bottom:0.8rem;">Select Amount (USD)</p>
+      <div class="donate-amounts">
+        <button class="amount-btn" data-amount="10">$10</button>
+        <button class="amount-btn active" data-amount="25">$25</button>
+        <button class="amount-btn" data-amount="50">$50</button>
+        <button class="amount-btn" data-amount="100">$100</button>
+        <button class="amount-btn" data-amount="250">$250</button>
+        <button class="amount-btn" data-amount="custom">Custom</button>
+      </div>
+
+      <!-- Program selection -->
+      <p style="font-size:0.8rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--charcoal);margin-bottom:0.8rem;">Direct to Program (Optional)</p>
+      <div class="program-select-grid">
+        <button class="program-select-btn active">🌍 Where Needed Most</button>
+        <button class="program-select-btn">📚 Education</button>
+        <button class="program-select-btn">🏥 Healthcare</button>
+        <button class="program-select-btn">💧 Clean Water</button>
+        <button class="program-select-btn">👩 Women's Rights</button>
+        <button class="program-select-btn">🚨 Emergency Relief</button>
+      </div>
+
+      <form id="donate-form" novalidate>
+        <div class="form-group">
+          <label for="custom-amount">Donation Amount (USD) *</label>
+          <input type="number" id="custom-amount" name="amount" placeholder="Enter amount (e.g. 25)" value="25" min="1" required/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="d-fname">First Name *</label>
+            <input type="text" id="d-fname" name="d-fname" placeholder="Your first name" required/>
+          </div>
+          <div class="form-group">
+            <label for="d-lname">Last Name *</label>
+            <input type="text" id="d-lname" name="d-lname" placeholder="Your last name" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="d-email">Email Address *</label>
+          <input type="email" id="d-email" name="d-email" placeholder="For your donation receipt" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="d-card">Card Number *</label>
+          <input type="text" id="d-card" name="d-card" placeholder="•••• •••• •••• ••••" maxlength="19" required/>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="d-expiry">Expiry Date *</label>
+            <input type="text" id="d-expiry" name="d-expiry" placeholder="MM / YY" maxlength="7" required/>
+          </div>
+          <div class="form-group">
+            <label for="d-cvv">CVV *</label>
+            <input type="text" id="d-cvv" name="d-cvv" placeholder="•••" maxlength="4" required/>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:0.7rem;margin-bottom:1.5rem;">
+          <input type="checkbox" id="d-anon" style="width:16px;height:16px;accent-color:var(--gold);"/>
+          <label for="d-anon" style="font-size:0.82rem;color:var(--mid-gray);cursor:pointer;">Make my donation anonymous</label>
+        </div>
+
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:1.1rem;font-size:1rem;">
+          ♥ Donate $25 Securely
+        </button>
+
+        <div class="secure-note">
+          🔒 256-bit SSL Encryption · Your details are never stored
+        </div>
+        <div class="form-success">🎉 Thank you for your generous donation! A receipt has been sent to your email.</div>
+      </form>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="donate-impact-sidebar reveal-right">
+      <!-- Impact meter -->
+      <div class="impact-meter">
+        <h4>Your Donation's Impact</h4>
+        <div class="impact-meter-item"><span class="amt">$10</span><span>Provides school supplies for one child for a month</span></div>
+        <div class="impact-meter-item"><span class="amt">$25</span><span>Funds one child's clean water access for a full year</span></div>
+        <div class="impact-meter-item"><span class="amt">$50</span><span>Pays for a full medical check-up for 5 community members</span></div>
+        <div class="impact-meter-item"><span class="amt">$100</span><span>Sponsors one girl's education for an entire school term</span></div>
+        <div class="impact-meter-item"><span class="amt">$250</span><span>Funds a vocational training slot for one woman entrepreneur</span></div>
+      </div>
+
+      <!-- Promise card -->
+      <div class="impact-promise">
+        <h3>Our Donor Promise</h3>
+        <div class="promise-item">92 cents of every dollar goes directly to field programs — independently audited and publicly reported.</div>
+        <div class="promise-item">You will receive a tax-deductible receipt within minutes of your donation being processed.</div>
+        <div class="promise-item">We will never sell your data or add you to third-party lists without your explicit consent.</div>
+        <div class="promise-item">Monthly impact reports will keep you connected to the communities your generosity supports.</div>
+        <div class="promise-item">You can cancel, change, or redirect your donation at any time — zero friction, zero guilt.</div>
+      </div>
+
+      <!-- Testimonial -->
+      <div class="testimonial-card" style="margin-top:1.5rem;">
+        <p class="testimonial-quote">I've been donating $25/month for 3 years. The impact reports I receive are detailed and moving. I know exactly where my money goes.</p>
+        <div class="testimonial-author">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Michael T."/>
+          <div class="author-info">
+            <div class="name">Michael Torres</div>
+            <div class="origin">Monthly Donor, USA — 3 years</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY GIVE -->
+<section>
+  <div class="section-header centered reveal">
+    <p class="section-eyebrow">Why Give with HopeForward?</p>
+    <h2 class="section-title">Trusted by <em>Thousands</em></h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-card reveal delay-1">
+      <div class="value-icon">📊</div>
+      <h3>Full Transparency</h3>
+      <p>Every program's financials are independently audited and published on our website. You always know where your money goes.</p>
+    </div>
+    <div class="value-card reveal delay-2">
+      <div class="value-icon">🚀</div>
+      <h3>Fast Impact</h3>
+      <p>Donations are deployed to field programs within 30 days. No bureaucratic delays — your money moves at the speed of need.</p>
+    </div>
+    <div class="value-card reveal delay-3">
+      <div class="value-icon">🌏</div>
+      <h3>Global Reach</h3>
+      <p>48 countries, 120 active projects. Your gift is amplified through our network of 12,500 volunteers and 200+ local partners.</p>
+    </div>
+    <div class="value-card reveal delay-4">
+      <div class="value-icon">🏆</div>
+      <h3>Award-Winning</h3>
+      <p>Rated 4-stars by Charity Navigator, recognized by the UN, and independently certified for financial excellence for 10 consecutive years.</p>
+    </div>
+  </div>
+</section>
+
+<section class="impact-section">
+  <div class="impact-grid">
+    <div class="impact-item reveal delay-1">
+      <div class="impact-icon">💰</div>
+      <div class="impact-number"><span data-count="92" data-duration="1500">0</span><span class="suffix">%</span></div>
+      <div class="impact-label">To Programs</div>
+    </div>
+    <div class="impact-item reveal delay-2">
+      <div class="impact-icon">👥</div>
+      <div class="impact-number"><span data-count="47000" data-duration="2200">0</span></div>
+      <div class="impact-label">Active Donors</div>
+    </div>
+    <div class="impact-item reveal delay-3">
+      <div class="impact-icon">📅</div>
+      <div class="impact-number"><span data-count="15" data-duration="1600">0</span></div>
+      <div class="impact-label">Years Trusted</div>
+    </div>
+    <div class="impact-item reveal delay-4">
+      <div class="impact-icon">⭐</div>
+      <div class="impact-number"><span data-count="4" data-duration="1000">0</span></div>
+      <div class="impact-label">Star Rating</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+        <span class="logo-text">Hope<span>Forward</span></span>
+      </a>
+      <p class="footer-desc">A globally recognized NGO dedicated to sustainable development, education, and humanitarian action.</p>
+      <div class="social-links"><a href="#" class="social-link">f</a><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">▣</a><a href="#" class="social-link">in</a></div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Work</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="services.html">Education</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Clean Water</a></li><li><a href="services.html">Women's Empowerment</a></li></ul></div>
+    <div class="footer-col"><h4>Newsletter</h4><p style="font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1rem;line-height:1.6;">Monthly impact stories.</p><form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Your email"/><button type="submit">→</button></form></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 HopeForward NGO. Registered Charity #HC-2008-4471.</p>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Annual Report</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/form.js"></script>
+<script>
+  // Donation tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Program select buttons
+  document.querySelectorAll('.program-select-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.program-select-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Update donate button label with amount
+  const amountInput = document.getElementById('custom-amount');
+  const submitBtn = document.querySelector('#donate-form [type="submit"]');
+  if (amountInput && submitBtn) {
+    amountInput.addEventListener('input', () => {
+      const val = parseFloat(amountInput.value) || 0;
+      submitBtn.textContent = val > 0 ? `♥ Donate $${val} Securely` : '♥ Donate Securely';
+    });
+  }
+
+  // Card number formatting
+  const cardInput = document.getElementById('d-card');
+  if (cardInput) {
+    cardInput.addEventListener('input', e => {
+      let val = e.target.value.replace(/\D/g, '').substring(0, 16);
+      val = val.replace(/(.{4})/g, '$1 ').trim();
+      e.target.value = val;
+    });
+  }
+
+  // Expiry formatting
+  const expiryInput = document.getElementById('d-expiry');
+  if (expiryInput) {
+    expiryInput.addEventListener('input', e => {
+      let val = e.target.value.replace(/\D/g, '').substring(0, 4);
+      if (val.length >= 2) val = val.substring(0,2) + ' / ' + val.substring(2);
+      e.target.value = val;
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore HopeForward's comprehensive programs in education, healthcare, clean water, women's empowerment, and disaster relief."/>
+  <title>Our Work & Programs — HopeForward NGO</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <style>
+    .programs-hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .program-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+    .program-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
+    .program-card-header {
+      padding: 2rem 2rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .program-icon-wrap {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .program-card-header h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .program-card-body {
+      padding: 1.5rem 2rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .program-card-body p {
+      font-size: 0.9rem;
+      color: var(--mid-gray);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+    .program-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--light-gray);
+    }
+    .program-stat .num {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .program-stat .lbl {
+      font-size: 0.72rem;
+      color: var(--mid-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .partner-logos {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 0;
+      opacity: 0.5;
+    }
+    .partner-logo {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: 0.05em;
+      padding: 0.5rem 1.2rem;
+      border: 1.5px solid var(--light-gray);
+      border-radius: var(--radius-sm);
+    }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+      border: 1px solid var(--light-gray);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .approach-item {
+      padding: 2rem;
+      border-right: 1px solid var(--light-gray);
+      border-bottom: 1px solid var(--light-gray);
+      text-align: center;
+      transition: background var(--transition);
+    }
+    .approach-item:hover { background: var(--ivory); }
+    .approach-item:last-child { border-right: none; }
+    .approach-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .approach-item h4 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+    .approach-item p { font-size: 0.82rem; color: var(--mid-gray); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+    <span class="logo-text">Hope<span>Forward</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Our Work</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <p class="section-eyebrow">What We Do</p>
+    <h1>Our <em>Programs</em> & Services</h1>
+    <p>Six comprehensive, evidence-based programs designed to address root causes — not just symptoms — of poverty and inequity worldwide.</p>
+  </div>
+</div>
+
+<nav class="breadcrumb"><a href="index.html">Home</a> / <span>Our Work</span></nav>
+
+<!-- PROGRAMS GRID -->
+<section class="bg-white">
+  <div class="section-header reveal">
+    <p class="section-eyebrow">Core Programs</p>
+    <h2 class="section-title">Changing Lives Across <em>Six</em> Dimensions</h2>
+    <p class="section-desc">Each program operates as an integrated ecosystem, ensuring that progress in one area reinforces and accelerates gains in all others.</p>
+  </div>
+  <div class="programs-hero-grid">
+
+    <div class="program-card reveal delay-1">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#fef3c7,#fde68a);">📚</div>
+        <div>
+          <h3>Education for All</h3>
+          <span style="font-size:0.75rem;color:var(--gold-dark);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Active in 28 Countries</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>We build schools, train teachers, develop locally-relevant curricula, and provide scholarships that remove financial barriers to learning — especially for girls and children with disabilities.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">340</div><div class="lbl">Schools Built</div></div>
+          <div class="program-stat"><div class="num">180K</div><div class="lbl">Students Enrolled</div></div>
+          <div class="program-stat"><div class="num">94%</div><div class="lbl">Graduation Rate</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Education →</a>
+      </div>
+    </div>
+
+    <div class="program-card reveal delay-2">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#d1fae5,#6ee7b7);">🏥</div>
+        <div>
+          <h3>Healthcare Outreach</h3>
+          <span style="font-size:0.75rem;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Active in 35 Countries</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>Mobile clinics, community health workers, maternal care programs, and vaccination campaigns bring preventive and curative healthcare to the most remote and underserved populations.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">12</div><div class="lbl">Mobile Clinics</div></div>
+          <div class="program-stat"><div class="num">1.2M</div><div class="lbl">Patients Treated</div></div>
+          <div class="program-stat"><div class="num">850K</div><div class="lbl">Vaccinations</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Healthcare →</a>
+      </div>
+    </div>
+
+    <div class="program-card reveal delay-3">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#dbeafe,#93c5fd);">💧</div>
+        <div>
+          <h3>Clean Water & Sanitation</h3>
+          <span style="font-size:0.75rem;color:#2563eb;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Active in 18 Countries</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>We install solar-powered water purification systems, dig wells, build sanitation facilities, and train community hygiene champions — addressing the most fundamental human need.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">200</div><div class="lbl">Wells Dug</div></div>
+          <div class="program-stat"><div class="num">300K</div><div class="lbl">People Served</div></div>
+          <div class="program-stat"><div class="num">60%</div><div class="lbl">Disease Reduction</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Water Access →</a>
+      </div>
+    </div>
+
+    <div class="program-card reveal delay-1">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#fce7f3,#f9a8d4);">👩</div>
+        <div>
+          <h3>Women's Empowerment</h3>
+          <span style="font-size:0.75rem;color:#be185d;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Active in 22 Countries</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>Microfinance loans, vocational training, legal rights education, and women's leadership academies help break generational cycles of poverty and gender-based discrimination.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">45K</div><div class="lbl">Women Trained</div></div>
+          <div class="program-stat"><div class="num">$2.1M</div><div class="lbl">Micro-loans Issued</div></div>
+          <div class="program-stat"><div class="num">78%</div><div class="lbl">Income Increase</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Women's Rights →</a>
+      </div>
+    </div>
+
+    <div class="program-card reveal delay-2">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">🌱</div>
+        <div>
+          <h3>Environment & Climate</h3>
+          <span style="font-size:0.75rem;color:#065f46;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Active in 15 Countries</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>Reforestation projects, sustainable farming training, renewable energy installations, and climate adaptation programs ensure communities can thrive in a changing world.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">2M+</div><div class="lbl">Trees Planted</div></div>
+          <div class="program-stat"><div class="num">500</div><div class="lbl">Farms Converted</div></div>
+          <div class="program-stat"><div class="num">40%</div><div class="lbl">Yield Increase</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Environment →</a>
+      </div>
+    </div>
+
+    <div class="program-card reveal delay-3">
+      <div class="program-card-header">
+        <div class="program-icon-wrap" style="background:linear-gradient(135deg,#fee2e2,#fca5a5);">🚨</div>
+        <div>
+          <h3>Disaster Relief</h3>
+          <span style="font-size:0.75rem;color:#b91c1c;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Rapid Global Response</span>
+        </div>
+      </div>
+      <div class="program-card-body">
+        <p>72-hour rapid response teams, pre-positioned emergency supply depots, and community disaster preparedness training ensure we arrive first and stay until full recovery is achieved.</p>
+        <div class="program-stats">
+          <div class="program-stat"><div class="num">38</div><div class="lbl">Disasters Responded</div></div>
+          <div class="program-stat"><div class="num">500K</div><div class="lbl">People Helped</div></div>
+          <div class="program-stat"><div class="num">72hr</div><div class="lbl">Response Time</div></div>
+        </div>
+        <a href="donate.html" class="btn-gold">Support Relief Fund →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="section-header centered reveal">
+    <p class="section-eyebrow">How We Work</p>
+    <h2 class="section-title">Our 4-Phase <em>Approach</em></h2>
+    <p class="section-desc">Every HopeForward program follows a proven, community-centered methodology that ensures impact, ownership, and sustainability.</p>
+  </div>
+  <div class="approach-grid reveal">
+    <div class="approach-item">
+      <div class="approach-num">01</div>
+      <h4>Listen & Assess</h4>
+      <p>Deep community consultation, needs mapping, and cultural orientation before any program design begins.</p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-num">02</div>
+      <h4>Co-Design</h4>
+      <p>Community leaders, local experts, and beneficiaries co-create every program with our technical teams.</p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-num">03</div>
+      <h4>Implement</h4>
+      <p>Phased rollout with clear milestones, local hiring, and transparent progress reporting to all stakeholders.</p>
+    </div>
+    <div class="approach-item">
+      <div class="approach-num">04</div>
+      <h4>Transfer & Exit</h4>
+      <p>Full handover to trained local teams, with 3-year monitoring support to ensure lasting independence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="bg-white">
+  <div class="section-header centered reveal">
+    <p class="section-eyebrow">Trusted By</p>
+    <h2 class="section-title">Our Global <em>Partners</em></h2>
+  </div>
+  <div class="partner-logos reveal">
+    <span class="partner-logo">United Nations</span>
+    <span class="partner-logo">WHO</span>
+    <span class="partner-logo">UNESCO</span>
+    <span class="partner-logo">World Bank</span>
+    <span class="partner-logo">USAID</span>
+    <span class="partner-logo">UNICEF</span>
+    <span class="partner-logo">Bill & Melinda Gates Foundation</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner reveal">
+  <p class="section-eyebrow">Fund a Program</p>
+  <h2 class="section-title">Choose the <em style="color:var(--gold-light)">Change</em> You Want</h2>
+  <p>Your donation can be directed to the program area that speaks to your heart most — 100% goes directly to field operations.</p>
+  <div class="btn-group">
+    <a href="donate.html" class="btn-white">♥ Donate to a Program</a>
+    <a href="contact.html" class="btn-outline-white">Corporate Partnership</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"><path d="M12 2C8 2 5 5 5 9c0 7 7 13 7 13s7-6 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="3" fill="#c9a84c" stroke="none"/></svg></div>
+        <span class="logo-text">Hope<span>Forward</span></span>
+      </a>
+      <p class="footer-desc">A globally recognized NGO dedicated to sustainable development, education, and humanitarian action.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">f</a><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">▣</a><a href="#" class="social-link">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Our Work</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="donate.html">Donate</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul><li><a href="services.html">Education</a></li><li><a href="services.html">Healthcare</a></li><li><a href="services.html">Clean Water</a></li><li><a href="services.html">Women's Empowerment</a></li><li><a href="services.html">Environment</a></li><li><a href="services.html">Disaster Relief</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Newsletter</h4>
+      <p style="font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1rem;line-height:1.6;">Monthly impact stories.</p>
+      <form class="newsletter-form" onsubmit="return false;"><input type="email" placeholder="Your email"/><button type="submit">→</button></form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 HopeForward NGO. Registered Charity #HC-2008-4471.</p>
+    <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Annual Report</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/counter.js"></script>
+</body>
+</html>
